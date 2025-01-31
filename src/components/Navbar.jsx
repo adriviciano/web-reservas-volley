@@ -6,11 +6,11 @@ export default function Navbar() {
 
   return (
     <nav>
-      {!isLoggedIn && <a href="/login">Login</a>}
+      {!isLoggedIn && <a href={`${import.meta.env.BASE_URL}login`}>Login</a>}
       {isLoggedIn && (
         <>
-          <a href="/reservar">Hacer una Reserva</a>
-          <a href="/mis-reservas">Ver Reservas</a>
+          <a href='/reservar'>Hacer una Reserva</a>
+          <a href='/mis-reservas'>Ver Reservas</a>
         </>
       )}
     </nav>

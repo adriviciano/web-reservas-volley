@@ -16,9 +16,13 @@ export default function MisReservas() {
       }
 
       try {
-        const response = await fetch(`http://127.0.0.1:8000/reservas/${cookies.username}`);
+        const response = await fetch(
+          `http://127.0.0.1:8000/reservas/${cookies.username}`
+        );
         if (!response.ok) {
-          throw new Error(`Error al obtener las reservas: ${response.statusText}`);
+          throw new Error(
+            `Error al obtener las reservas: ${response.statusText}`
+          );
         }
 
         const data = await response.json();
@@ -31,7 +35,10 @@ export default function MisReservas() {
                 Object.entries(times).forEach(([time, reservations]) => {
                   reservations.forEach((reservation) => {
                     reservasArray.push({
-                      date: `${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`,
+                      date: `${year}-${month.padStart(2, "0")}-${day.padStart(
+                        2,
+                        "0"
+                      )}`,
                       time,
                     });
                   });
@@ -64,6 +71,10 @@ export default function MisReservas() {
 
   return (
     <div className="container">
+      <nav>
+        <a href='/'>Inicio</a>
+        <a href='/reservar'>Hacer una Reserva</a>
+      </nav>
       <h1>Mis Reservas</h1>
       {reservas.length > 0 ? (
         <ul>

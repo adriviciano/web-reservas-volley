@@ -34,6 +34,9 @@ export default function Reserva() {
 
   return (
     <div className="container">
+      <nav>
+        <a href='/'>Inicio</a>
+      </nav>
       <h1>Hacer una Reserva</h1>
       <input type="date" value={date} onChange={handleDateChange} />
       <select value={time} onChange={(e) => setTime(e.target.value)}>
