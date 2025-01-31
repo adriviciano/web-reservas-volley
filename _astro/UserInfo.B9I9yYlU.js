@@ -1,0 +1,1 @@
+import{u as o,j as e}from"./index.BVSIaKru.js";import"./index.BL7xzsR_.js";function i(){const[s]=o(["username"]),n=s.username||"Invitado";return e.jsx("div",{className:"container text-center",children:e.jsxs("h1",{children:["Bienvenido, ",n]})})}export{i as default};
